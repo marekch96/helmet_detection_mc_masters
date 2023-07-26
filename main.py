@@ -1,4 +1,7 @@
+from ultralytics import YOLO
 
-print('hello')
+# Load a model
+model = YOLO("YOLOv8x.yaml")  # build a new model from scratch
 
- a,b=[]
+# Use the model
+results = model.train(data="config.yaml", epochs=10) 
