@@ -1,5 +1,5 @@
 
-path: /home/marek/helmet_detection_mc_masters  # dataset root dir
+path: /home/marek/helmet_detection_mc_masters/datasets # dataset root dir
 train: images/train  # train images (relative to 'path')
 val: images/train  # val images (relative to 'path')
 
