@@ -1,7 +1,14 @@
+from flask import Flask, render_template, redirect, request
 from ultralytics import YOLO
 
-# Load a model
-model = YOLO('yolov8l.yaml')  # build a new model from scratch
+app=Flask(__name__)
 
-# Use the model
-results = model.train(data="config.yaml", epochs=100)
+@app.route('/')
+def home():
+    return f('test')
+
+if __name__ == "__main__":
+    app.run()
+
+
+

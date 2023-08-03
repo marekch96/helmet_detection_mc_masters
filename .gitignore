@@ -1,0 +1,9 @@
+*.avi
+*.mp4
+*.jpg
+*.png
+*.txt
+helmet_detection_mc_masters/BAD_RESULTS+DATASET
+helmet_detection_mc_masters/data_yolov8_format
+helmet_detection_mc_masters/runs
+helmet_detection_mc_masters/data
