@@ -1,0 +1,146 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    <title>Motorcycle and Helmet Detection YOLOv8</title>
+
+   <!--- <link rel="canonical" href="https://getbootstrap.com/docs/5.0/examples/cheatsheet/"> -->
+
+    
+
+    <!-- Bootstrap core CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">  
+
+    <style>
+      .bd-placeholder-img {
+        font-size: 1.125rem;
+        text-anchor: middle;
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        user-select: none;
+      }
+
+      @media (min-width: 768px) {
+        .bd-placeholder-img-lg {
+          font-size: 3.5rem;
+        }
+      }
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+    <link href="static/style.css" rel="stylesheet">
+  </head>
+  <body class="bg-light">
+<header class="bd-header bg-dark py-3 d-flex align-items-center border-bottom border-dark">
+      <div class="container-fluid d-flex align-items-center">
+        <h1 class="d-flex align-items-center fs-4 text-white mb-0">
+          <img src="../static/Ultralytics_YOLOv8_Logotype_1_Reverse_Crop.png" 
+          width="256" height="68.5" class="me-3" alt="Yolo v8">
+          Motorcyle and Helmet Detection System <br>
+          Built using YOLOv8, Flask, Open Images V7 and Bootstrap 5
+        </h1>
+      </div>
+      <div>
+        </h1 class="d-flex align-items-end mr-auto">
+        <a href="https://getbootstrap.com/" class="ms-auto link-light" hreflang="ar">Bootstrap 5 </a><br>
+        <a href="https://flask.palletsprojects.com/en/2.3.x/" class="ms-auto link-light" hreflang="ar">Flask 2.3</a><br>
+        <a href="https://ultralytics.com/yolov8" class="ms-auto link-light" hreflang="ar">Ultralytics Yolov8</a><br>
+        <a href="https://storage.googleapis.com/openimages/web/index.html" class="ms-auto link-light" hreflang="ar">Open ImagesV7  </a>
+        </h1>
+      </div>
+    </header>    
+
+    <div class="bd-cheatsheet container-fluid bg-body">
+      <section id="content">
+        <h2 class="sticky-xl-top fw-bold pt-3 pt-xl-5 pb-2 pb-xl-3">Contents</h2>
+    
+        <article class="my-3" id="About">
+          <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+            <h3>About the project</h3>
+            <a class="d-flex align-items-center" href="https://github.com/marekch96/helmet_detection_mc_masters.git">Project GitHub Repository </a>
+          </div>
+          <div>
+            <div class="bd-example">
+            <div class="accordion" id="About">
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingOne">
+                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                    About the project and author
+                  </button>
+                </h4>
+                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    This website allows an user to upload image or video. The detector <strong>detect two classes of objects - motorcycles and helmets</strong>. The website uses pre-trained Yolov8x model to inference results to the user. The model has been trained and validated  on Open Images Dataset V7. The author used various tools to achieve project aims including : Yolov8, Bootstrap 5, Flask and Open Images Dataset V7.
+                    Please click links at the top right corner if interested in any of tools used by the author. This website is a part of Marek’s Checinski (Student Ref: 10804812) master’s dissertation – MSc AI student at Plymouth University.
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingTwo">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                    Dataset structure 
+                  </button>
+                </h4>
+                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    The dataset for the project has been ethically retrieved from Open Images Dataset V7 API. The author used various Python code sources to download and pre-format data into YOLO format. 
+                    The dataset contains 13.499 training and 417 validation images in various sizes for both clasess altogether. The images are downsized to 640x640 pixels at the input. 
+                  </div>
+                </div>
+              </div>
+              <div class="accordion-item">
+                <h4 class="accordion-header" id="headingThree">
+                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                    Model performance
+                  </button>
+                </h4>
+                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                  <div class="accordion-body">
+                    The best performing YOLOv8l model has been trained for 100 epochs with batch size equals to 16 images.
+                    The model presents performance: <br>
+                    mAP@50=0.792<br>
+                    mAP@50-90=0.562<br>
+                    Precision=0.735<br>
+                    Recall=0.772
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            </div>
+          </div>
+
+          
+        </article>
+    
+      <section id="form">   
+        <article class="my-3" id="image_input">
+          <div class="bd-heading sticky-xl-top align-self-start mt-5 mb-3 mt-xl-0 mb-xl-2">
+            <h3>Data input </h3>
+          </div>
+          <div>
+            <div class="bd-example">
+            <!--form to imput file yolo detections-->
+            <form class="form-signin col-lg-3" method=post enctype=multipart/form-data name="form1">
+              <div class="mb-3">
+                <label class="form-label" for="customFile">Upload image or video - jpg or mp4 files are allowed</label>
+                <input type="file" name="file" class="form-control-file" id="inputfile">
+              </div>
+              <button type="submit" class="btn btn-primary">Upload</button>
+            </form>
+            </div>
+          </div>
+        </article>
+      </section>
+        
+    </div>
+    
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm" crossorigin="anonymous"></script> <!--that makes bootstrap classes work-->
+</body>
+
+      <!--<script src="/static/cheatsheet.js"></script>-->
+</html>
+<!--update -->
