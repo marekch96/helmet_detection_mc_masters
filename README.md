@@ -4,7 +4,7 @@ To run the web application follow these four steps:
 1. Clone repo
 2. Download requirements file
 ```
-python -m pip install -r requirements.txt
+python -m pip install -r .\requirements.txt
 ```
 3. Run the web application
 ```
