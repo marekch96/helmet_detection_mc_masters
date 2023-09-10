@@ -1,0 +1,12 @@
+boto3
+botocore
+flask
+numpy
+opencv_contrib_python
+opencv_python
+opencv_python_headless
+pillow
+tqdm
+ultralytics
+werkzeug
+
