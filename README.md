@@ -12,5 +12,5 @@ python3 -m pip install -r .\requirements.txt
 python3 .\webapp.py --port 5000 
 ```
 4. Click and follow the link to 127.0.0.1:5000 to load website
-#Example prediction
-![example_prediction](Example prediction/image_2_perfect_detection.jpg)
+# Example prediction
+![example_prediction](example_detection.jpg)
