@@ -45,12 +45,12 @@ def display(filename):
 
 #method to process image and inference yolo 
 
-#code source and support:https://github.com/robmarkcole/yolov5-flask/tree/master , https://www.youtube.com/watch?v=8SQcB2g_cp4&t=877s&ab_channel=CodeWithAarohi
+#code source :https://github.com/robmarkcole/yolov5-flask/tree/master and  https://www.youtube.com/watch?v=8SQcB2g_cp4&t=877s&ab_channel=CodeWithAarohi
 
 @app.route('/',methods=["GET","POST"])
 def predict():
     if request.method=="POST":  
-        f=request.files["file"] #object passed by form from index.html
+        f=request.files["file"] #object passed by form from new_index.html
         path=os.path.dirname(__file__)
         file_path=os.path.join(path,'uploads',f.filename)
         print("images and videos will be saved in: ",file_path)
@@ -65,14 +65,11 @@ def predict():
         
         if file_extension=="jpg":  # or file_extension=="jpeg"): handling jpg
             input_img=cv2.imread(file_path)
-            #frame=cv2.imencode('.jpg',cv2.UMat(input_img))[1].tobytes()
-            #print(frame)
-            #image=Image.open(io.BytesIO(frame))
-            
             ##detection
             
             yolo=YOLO("helmet_motorcycle_detection_best.pt")
             detections=yolo.predict(input_img,save=True)
+            print(detections)
             return display(f.filename)
             
         elif file_extension=="mp4":
@@ -127,7 +124,7 @@ def get_frame():
 def video_feed():
     print('video feed function called ')
     return Response(get_frame(),
-                    mimetype='multipart/x mixed-replace boundary=frame')   
+                    mimetype='multipart/x mixed-replace boundary=frame')  
     
     
 if __name__ == "__main__":

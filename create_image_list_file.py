@@ -25,7 +25,7 @@ for j, filename in enumerate([train_bboxes_filename, validation_bboxes_filename]
     with open(filename, 'r') as f:
         line = f.readline()
         while len(line) != 0:
-            id, _, class_name, _, x1, x2, y1, y2, _, _, _, _, _ = line.split(',')[:13]
+            id, _, class_name, _, x1, x2, y1, y2, _, _, _, _, _ = line.split(',')[:13] 
             if (class_name in [helmet_id] or class_name in [motorcycle_id]) and id not in image_list_file_list:
                 image_list_file_list.append(id)
                 with open(image_list_file_path, 'a') as fw:

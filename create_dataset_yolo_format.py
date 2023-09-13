@@ -21,7 +21,7 @@ motorcycle_id = '/m/04_sv'  #general classes for box detection. id's from csv fi
 
 train_bboxes_filename = os.path.join('.', 'oidv6-train-annotations-bbox.csv')
 validation_bboxes_filename = os.path.join('.', 'validation-annotations-bbox.csv')
-#test_bboxes_filename = os.path.join('.', 'test-annotations-bbox.csv')
+#test_bboxes_filename = os.path.join('.', 'test-annotations-bbox.csv') diffent data used for testing 
 
 
 for j, filename in enumerate([train_bboxes_filename, validation_bboxes_filename]):
