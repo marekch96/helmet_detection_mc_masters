@@ -1,7 +1,6 @@
-![Website head](_website_head.png)
 
 # Motorcycle and helmet detection end-user application
-
+![Website head](_website_head.png)
 To run the web application follow these four steps: 
 1. Clone repo
 2. Download requirements file
