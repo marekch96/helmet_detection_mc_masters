@@ -1,3 +1,5 @@
+![Website head](_website_head.png)
+
 # Motorcycle and helmet detection end-user application
 
 To run the web application follow these four steps: 
