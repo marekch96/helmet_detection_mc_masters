@@ -1,9 +1,11 @@
 
 # Motorcycle and helmet detection end-user website
-An end-user website runs trained by the author YOLOv8 model to detecttwo types of objects: motorcycles and helmets.
+An end-user website runs trained by the author [YOLOv8](https://docs.ultralytics.com/) model to detect two types of objects: motorcycles and helmets.
 There are two types of files allowed:
 - images in ".jpg" format
 - videos in ".mp4" format
+
+The images used for the model training are corresponding classes of object retrieved from [Open Images Datset V7](https://storage.googleapis.com/openimages/web/index.html) API. 
   
 ![Website head](_website_head.png)
 To run the web application follow these four steps: 
@@ -19,10 +21,31 @@ python3 .\webapp.py --port 5000
 4. Click and follow the link to 127.0.0.1:5000 to load website
 # Example prediction
 ![example_prediction](example_detection.jpg)
-# Configuration
+# Training Dataset
+|Split|Value|Origin|Image size|
+|:---:|:---:|:---:|:---:|
+|Training|13499|Open Images Dataset V7|Various|
+|Validation|417|Open Images Dataset V7|Various|
+# Model Configuration
+|Parameter|Value|
+|:---:|:---:|
+|Model|YOLOv8l|
+|Epochs|100|
+|Input image size (px)|640|
+|Batch size|16|
+|Cls loss|0.5|
+|Box loss|7.5|
+|DFL loss|1.5|
+|IoU|0.7|
 
+For more information please see configuration files: [config.yaml](config.yaml) and [args.yaml](args.yaml) 
+# Accuracy
+Reasult and accuracy: 
+|Model|Epochs|Batch size|mAP@50|mAP@50-95|Precision|Recall|
+|:---:|:---:|:---:|:---:|:---:|:---:|:---:|
+|Yolov8l|100|16|0.792|0.562|0.753|0.772|
 
-# Performance 
+Mean averange precision per invidual class:
 | Class       |  mAP@0.5 | 
 | :---        | :---:    |    
 | Motorcycle  | 0.842    |
