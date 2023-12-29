@@ -5,7 +5,7 @@ There are two types of files allowed:
 - images in ".jpg" format
 - videos in ".mp4" format
 
-The images used for the model training are corresponding classes of object retrieved from [Open Images Datset V7](https://storage.googleapis.com/openimages/web/index.html) API. 
+The images used for the model training are corresponding classes of objects retrieved from [Open Images Datset V7](https://storage.googleapis.com/openimages/web/index.html) API. 
   
 ![Website head](_website_head.png)
 To run the web application follow these four steps: 
@@ -40,12 +40,12 @@ python3 .\webapp.py --port 5000
 
 For more information please see configuration files: [config.yaml](config.yaml) and [args.yaml](args.yaml) 
 # Accuracy
-Reasult and accuracy: 
+Results and accuracy: 
 |Model|Epochs|Batch size|mAP@50|mAP@50-95|Precision|Recall|
 |:---:|:---:|:---:|:---:|:---:|:---:|:---:|
 |Yolov8l|100|16|0.792|0.562|0.753|0.772|
 
-Mean averange precision per invidual class:
+Accuracy per invidual class:
 | Class       |  mAP@0.5 | 
 | :---        | :---:    |    
 | Motorcycle  | 0.842    |
