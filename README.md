@@ -52,3 +52,7 @@ Mean averange precision per invidual class:
 | Helmet      | 0.742    | 
 | Combined    | 0.792    |
 
+# Precision-recall curve
+![Precision-recall curve](https://github.com/marekch96/helmet_detection_mc_masters/blob/d76955862adb4133a56c55598a7fa74ee4cf5035/results%20and%20graphs/PR_curve_yolov8l_100_16.png)
+# Confusion matrix 
+![Confusion matrix](https://github.com/marekch96/helmet_detection_mc_masters/blob/d76955862adb4133a56c55598a7fa74ee4cf5035/results%20and%20graphs/confusion_matrix_normalized__yolov8l_100_16..png)
